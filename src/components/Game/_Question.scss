@@ -1,0 +1,37 @@
+@import "../scss-root/base";
+
+.question-container {
+    display: flex;
+    height: 100%;
+    width: 800px;
+    border: 1px solid white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    @media(max-width: 800px) {
+        width: 100%;
+    }
+    .question-text {
+        background: $color-white;
+        color: $color-space-purple;
+        display: flex;
+        justify-content: center;
+        padding: 2em;
+        width: 300px;
+        border-radius: 0.25rem;
+        box-shadow: $common-shadow;
+        @media(max-width: 400px) {
+            width: 90%;
+        }
+    }
+
+    .answers-container {
+        width: 90%;
+        border: 1px solid blue;
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: space-evenly;
+        justify-content: space-evenly;
+        gap: 1em;
+    }
+}

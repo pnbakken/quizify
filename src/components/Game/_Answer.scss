@@ -1,0 +1,15 @@
+@import "../scss-root/base";
+
+.answer-btn {
+    padding: 1em;
+    max-width: 10em;
+}
+
+.answer-btn.correct {
+    background: $color-spring-green;
+    color: $color-white;
+}
+.answer-btn.incorrect {
+    color: $color-white;
+    background: $color-lake-red;
+}

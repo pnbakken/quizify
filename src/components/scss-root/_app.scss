@@ -1,0 +1,11 @@
+@import "./base";
+
+.App {
+    background: $color-space-purple;
+    height: 100vh;
+    font-family: $font-main;
+    color: #f7f7ff;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+   
+}

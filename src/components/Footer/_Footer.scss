@@ -1,0 +1,9 @@
+@import "../scss-root/base";
+
+.app-footer {
+    background: $color-primary;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
