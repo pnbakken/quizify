@@ -14,14 +14,15 @@ function Answer({text, id, correct, handleAnswer}) {
       handleAnswer(text)
       setIsCorrect(false);
       setIsIncorrect(false);
-    }, 500)
+    }, 400)
     
   }
   return (
     <button className={`answer-btn ${ isCorrect? "correct" : ""} ${isIncorrect ? "incorrect" : ""}`} data-index={id} value={text}
      onClick={() => {
         handleClick();
-    }}>{text}</button>
+    }}
+    dangerouslySetInnerHTML={{__html:text}}/>
   )
 }
 

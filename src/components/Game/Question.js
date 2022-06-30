@@ -19,9 +19,9 @@ export default function Question({questionData, handleAnswer}) {
   }
   return (
     <div className="question-container">
-        <div className="question-text">
-            {questionData.question}
-        </div>
+        <div className="question-text"
+            dangerouslySetInnerHTML={{__html:questionData.question}}
+        />
         <div className="answers-container">
             {createRandom(answersList).map( (a, index) => <Answer text={a} key={index} id={index} correct={questionData.correct_answer} handleAnswer={handleAnswer}/>)}
         </div>
