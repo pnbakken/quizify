@@ -25,7 +25,6 @@ export default function Question({questionData, handleAnswer}) {
         <div className="answers-container">
             {createRandom(answersList).map( (a, index) => <Answer text={a} key={index} id={index} correct={questionData.correct_answer} handleAnswer={handleAnswer}/>)}
         </div>
-        answer is : {questionData.correct_answer}
     </div>
   )
 }
