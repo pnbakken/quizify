@@ -1,0 +1,27 @@
+@import "../scss-root/base";
+
+
+.result-screen {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10%;
+    align-items: center;
+    
+    .final-score {
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .final-points {
+            font-weight: 600;
+            font-size: 56px;
+        }
+    }
+
+    .reward-container {
+        font-size: 24px;
+    }
+}

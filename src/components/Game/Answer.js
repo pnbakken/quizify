@@ -14,7 +14,7 @@ function Answer({text, id, correct, handleAnswer}) {
       handleAnswer(text)
       setIsCorrect(false);
       setIsIncorrect(false);
-    }, 400)
+    }, 600)
     
   }
   return (

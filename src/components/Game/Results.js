@@ -1,4 +1,5 @@
 import React from 'react'
+import "./_Results.scss"
 
 function Results({score, length}) {
 
@@ -24,7 +25,8 @@ function Results({score, length}) {
   return (
     <div className="result-screen">
         <div className="final-score">
-            { score + " / " + length}
+            <p className="final-points">{ score + " / " + length}</p>
+            <p>Final Score</p>
         </div>
         <div className="reward-container">
             {reward()}
