@@ -8,8 +8,8 @@ function Main({questionSet}) {
     const [currentScore, setCurrentScore] = useState(0);
     const handleAnswerClick = (answerOption, selection) => {
         console.log("Current score: " + currentScore)
-        console.log("Answer is: " + answerOption + ". Correct answer is: " + questionSet[currentQuestion].correctAnswerIndex);
-        if (answerOption === questionSet[currentQuestion].correctAnswerIndex) {
+        console.log("Answer is: " + answerOption + ". Correct answer is: " + questionSet[currentQuestion].correct_answer);
+        if (answerOption === questionSet[currentQuestion].correct_answer) {
             console.log("answer correct");
             setCurrentScore(currentScore+1);
         }
@@ -19,12 +19,13 @@ function Main({questionSet}) {
     <main className="app-main">
         <div className="game-window">
             <div className="game-header">
-                <div className="game-position">
-                    Question: {currentQuestion + " / " + questionSet.length}
+                {currentQuestion < questionSet.length ? <div className="game-position">
+                    Question: {(currentQuestion+1) + " / " + questionSet.length}
                 </div>
+                : ""}
                 
             </div>
-
+            {console.log(questionSet)}
             { (questionSet[currentQuestion]) ?
             <Question questionData={questionSet[currentQuestion]} handleAnswer={handleAnswerClick} />
             : <Results score={currentScore} length={questionSet.length} />

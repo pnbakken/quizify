@@ -7,11 +7,11 @@ function Answer({text, id, correct, handleAnswer}) {
   const [isIncorrect, setIsIncorrect] = useState(false);
 
   const handleClick = () => {
-    if (id === correct) {
+    if (text === correct) {
       setIsCorrect(true);
     } else setIsIncorrect(true);
     setTimeout(() => {
-      handleAnswer(id)
+      handleAnswer(text)
       setIsCorrect(false);
       setIsIncorrect(false);
     }, 500)
@@ -21,7 +21,7 @@ function Answer({text, id, correct, handleAnswer}) {
     <button className={`answer-btn ${ isCorrect? "correct" : ""} ${isIncorrect ? "incorrect" : ""}`} data-index={id} value={text}
      onClick={() => {
         handleClick();
-    }}>{text} {id}</button>
+    }}>{text}</button>
   )
 }
 
