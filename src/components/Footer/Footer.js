@@ -5,7 +5,16 @@ import "./_Footer.scss"
 function Footer() {
   return (
     <footer className="app-footer">
-        Footer
+      <span className="footer-link">
+          Content provided by <a href="https://opentdb.com/">Open Trivia Database</a>
+        </span>
+      <span className="footer-link">
+          <a href="https://github.com/pnbakken/quizify">
+            View GitHub
+          </a>
+        </span>
+        
+        
     </footer>
   )
 }
