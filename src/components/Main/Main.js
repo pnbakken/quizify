@@ -18,18 +18,19 @@ function Main({questionSet}) {
   return (
     <main className="app-main">
         <div className="game-window">
-            <div className="game-header">
-                {currentQuestion < questionSet.length ? <div className="game-position">
-                    Question: {(currentQuestion+1) + " / " + questionSet.length}
-                </div>
-                : ""}
-                
-            </div>
-            {console.log(questionSet)}
+            
             { (questionSet[currentQuestion]) ?
             <Question questionData={questionSet[currentQuestion]} handleAnswer={handleAnswerClick} />
             : <Results score={currentScore} length={questionSet.length} />
             }
+
+            <div className="game-header">
+                {currentQuestion < questionSet.length ? <div className="game-position">
+                    Question: {(currentQuestion+1) + " / " + questionSet.length}
+            </div>
+            : ""}
+                
+            </div>
         </div>
     </main>
   )

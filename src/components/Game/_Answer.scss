@@ -2,13 +2,13 @@
 
 .answer-btn {
     padding: 0.8em;
-    max-width: 10em;
+    width: 250px;
     background: $color-medium-purple;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     color: $color-white;
-    border: none;
     border-radius: 0.25rem;
+    border: none;
 }
 .answer-btn:hover {
     background: #4c1d72;

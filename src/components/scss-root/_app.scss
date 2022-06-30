@@ -2,7 +2,7 @@
 
 .App {
     background: $color-background;
-    height: 100vh;
+    min-height: 100vh;
     font-family: $font-main;
     color: #f7f7ff;
     display: grid;

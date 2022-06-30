@@ -6,7 +6,7 @@ function Footer() {
   return (
     <footer className="app-footer">
       <span className="footer-link">
-          Content provided by <a href="https://opentdb.com/">Open Trivia Database</a>
+          Content from <a href="https://opentdb.com/">Open Trivia Database</a>
         </span>
       <span className="footer-link">
           <a href="https://github.com/pnbakken/quizify">
