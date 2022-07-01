@@ -3,17 +3,23 @@
 $color-space-purple: #22223b;
 $color-medium-purple: #753ea3;
 
-$color-purple-gradient: radial-gradient(#753ea3, #40205B);
+$color-purple-gradient: radial-gradient(circle, #753ea3 0%, #64308f 51%, #66269b);
 
 $color-lake-red: #c3423f;
+$color-red-gradient: radial-gradient(circle, #c3423f 0%, #b3302e 51%, #961a18 100%);
+
 $color-spring-green: #137547;
+
 
 $color-slate-gray: #404e4d;
 $color-white: #f7f7ff;
 
 
-$color-primary: $color-medium-purple;
+
+$color-primary: $color-purple-gradient;
 $color-background: $color-space-purple;
+$color-text: $color-white;
+
 
 $common-shadow: 5px 5px 5px black;
 $common-transition: all 500ms ease;

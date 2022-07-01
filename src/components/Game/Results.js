@@ -12,7 +12,7 @@ function Results({score, length}) {
                 return `${base}You didn't get a single right answer. Not one. That's almost impressive!`;
             } else if (score < 3 && score > 0) {
                 return `${base}Why did you even bother?`;
-            } else if (score > 3 && score < 6) {
+            } else if (score >= 3 && score < 6) {
                 return `${base}Not bad, keep trying!`;
             } else if (score >= 6 && score <= 9) {
                 return `${base}You're pretty good at this!`;
