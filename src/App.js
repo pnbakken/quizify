@@ -6,62 +6,12 @@ import './components/scss-root/_app.scss';
 import { useEffect, useState } from 'react';
 
 function App() {
-  const questions = [
-    {
-      text: 'What does an apple have?',
-      answers: ['good sense of humour', 'deep sense of regret', 'feet', 'mesmerizing blue eyes'],
-      correctAnswerIndex: 2,
-    },
-    {
-      text: 'How does a question go?',
-      answers: ['fast', '"aaaooooo"', 'ravage me, you filthy beast', 'definitely'],
-      correctAnswerIndex: 2,
-    },
-    {
-      text: 'What does an apple have?',
-      answers: ['good sense of humour', 'deep sense of regret', 'feet', 'mesmerizing blue eyes'],
-      correctAnswerIndex: 2,
-    },
-    {
-      text: 'How does a question go?',
-      answers: ['fast', '"aaaooooo"', 'ravage me, you filthy beast', 'definitely'],
-      correctAnswerIndex: 3,
-    },
-    {
-      text: 'What does an apple have?',
-      answers: ['good sense of humour', 'deep sense of regret', 'feet', 'mesmerizing blue eyes'],
-      correctAnswerIndex: 2,
-    },
-    {
-      text: 'How does a question go?',
-      answers: ['fast', '"aaaooooo"', 'ravage me, you filthy beast', 'definitely'],
-      correctAnswerIndex: 3,
-    },
-    {
-      text: 'What does an apple have?',
-      answers: ['good sense of humour', 'deep sense of regret', 'feet', 'mesmerizing blue eyes'],
-      correctAnswerIndex: 2,
-    },
-    {
-      text: 'How does a question go?',
-      answers: ['fast', '"aaaooooo"', 'ravage me, you filthy beast', 'definitely'],
-      correctAnswerIndex: 3,
-    },
-    {
-      text: 'What does an apple have?',
-      answers: ['good sense of humour', 'deep sense of regret', 'feet', 'mesmerizing blue eyes'],
-      correctAnswerIndex: 2,
-    },
-    {
-      text: 'How does a question go?',
-      answers: ['fast', '"aaaooooo"', 'ravage me, you filthy beast', 'definitely'],
-      correctAnswerIndex: 3,
-    },
-   
-  ]
+  const [player, setPlayer] = useState(null);
+
 
   const [loading, setLoading] = useState(false);
   const [remoteQuestions, setRemoteQuestions] = useState([]);
+
 
   useEffect( () => {
     const loadQuestions = async () => {
@@ -78,6 +28,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      
       {loading? "Please wait" : <Main questionSet={remoteQuestions}/>}
       <Footer />
     </div>
